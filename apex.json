@@ -127,12 +127,8 @@
           "type": "link",
           "href": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_best_practices.htm",
           "text": "Apex Best Practices - Salesforce Documentation"
-        },
-        {
-          "type": "link",
-          "href": "https://trailhead.salesforce.com/en/content/learn/modules/apex_best_practices",
-          "text": "Apex Best Practices - Salesforce Trailhead"
         }
+        
       ]
     }
   ]
