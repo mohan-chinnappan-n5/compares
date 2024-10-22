@@ -1,0 +1,139 @@
+{
+  "pageTitle": "Salesforce Apex Best Practices",
+  "navbar": {
+    "title": "Apex Best Practices Guide",
+    "links": [
+      { "name": "Introduction", "href": "#introduction" },
+      { "name": "Coding Standards", "href": "#coding-standards" },
+      { "name": "Performance Optimization", "href": "#performance-optimization" },
+      { "name": "Security Best Practices", "href": "#security-best-practices" },
+      { "name": "Governor Limits", "href": "#governor-limits" },
+      { "name": "Testing", "href": "#testing" },
+      { "name": "References", "href": "#references" }
+    ]
+  },
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introduction to Apex Best Practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Apex is a strongly typed, object-oriented programming language used to develop applications on the Salesforce platform. Following best practices ensures that your Apex code is efficient, secure, and maintainable."
+        }
+      ]
+    },
+    {
+      "id": "coding-standards",
+      "title": "Coding Standards",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Adhering to coding standards improves code readability and maintainability, making it easier for teams to work on shared codebases."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Use meaningful variable and method names.",
+            "Write small, modular methods.",
+            "Avoid hardcoding IDs or values.",
+            "Use proper comments and documentation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "performance-optimization",
+      "title": "Performance Optimization",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Optimizing Apex code helps reduce CPU time, memory consumption, and ensures that the system runs smoothly under high load."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Use collections (Maps, Sets, and Lists) to store data and avoid repetitive SOQL queries.",
+            "Use bulk queries and DML operations to handle large data sets.",
+            "Minimize the use of synchronous callouts.",
+            "Leverage Salesforce caching mechanisms like Platform Cache where applicable."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security-best-practices",
+      "title": "Security Best Practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Securing your Apex code is essential to avoid vulnerabilities that can be exploited by malicious users."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Use ‘With Sharing’ keyword to enforce sharing rules in Apex classes.",
+            "Avoid SOQL injection by using binding variables.",
+            "Sanitize inputs from external sources (API, Visualforce, etc.).",
+            "Use custom permission sets to manage access control."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "governor-limits",
+      "title": "Governor Limits in Apex",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Salesforce imposes governor limits to ensure that no single Apex transaction consumes too many resources, which might affect system performance."
+        },
+        {
+          "type": "table",
+          "headers": ["Limit", "Description"],
+          "rows": [
+            ["SOQL Queries", "100 queries per transaction."],
+            ["DML Statements", "150 DML operations per transaction."],
+            ["Heap Size", "6 MB for synchronous and 12 MB for asynchronous execution."],
+            ["CPU Time", "Maximum of 10,000 milliseconds for each transaction."]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testing",
+      "title": "Testing Best Practices",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Apex code must have at least 75% test coverage before deployment. Writing effective unit tests ensures that your code is robust and bug-free."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Write unit tests that cover both positive and negative scenarios.",
+            "Use the ‘seeAllData=false’ annotation to avoid dependency on existing data.",
+            "Test for bulk data scenarios to ensure that your code handles large data volumes.",
+            "Use Test.startTest() and Test.stopTest() to test asynchronous operations."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "References",
+      "content": [
+        {
+          "type": "link",
+          "href": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_best_practices.htm",
+          "text": "Apex Best Practices - Salesforce Documentation"
+        },
+        {
+          "type": "link",
+          "href": "https://trailhead.salesforce.com/en/content/learn/modules/apex_best_practices",
+          "text": "Apex Best Practices - Salesforce Trailhead"
+        }
+      ]
+    }
+  ]
+}
