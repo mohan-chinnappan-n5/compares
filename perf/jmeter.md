@@ -68,17 +68,10 @@ Given the limitations of JMeter for SPAs, it's important to consider more modern
    - **Pros**: Excellent for measuring real user performance metrics, works in-browser, ideal for SPAs.
    - **Cons**: Primarily used for performance auditing rather than stress testing.
 
-5. **K6**
-
-   K6 is a developer-centric, modern load testing tool built for testing APIs and microservices. Although it's not designed to execute JavaScript or interact with the DOM like Selenium or Playwright, it excels at API performance testing, making it useful for testing the back-end of SPAs.
-
-   - **Pros**: Ideal for API load testing, easy-to-write scripts, and lightweight.
-   - **Cons**: Does not execute JavaScript or measure client-side rendering.
-
 #### Conclusion
 
 While JMeter remains a powerful tool for performance testing traditional web applications, it struggles with the dynamic nature of SPAs. The inability to execute JavaScript, difficulty in handling asynchronous requests, and the lack of client-side performance metrics make it less suitable for testing modern SPAs.
 
-For effective performance testing of SPAs, tools like Selenium, Cypress, Playwright, Lighthouse, and K6 offer more comprehensive solutions. These tools are built to handle JavaScript-heavy applications and can provide deeper insights into both back-end API performance and front-end user experience, making them better suited to the needs of modern web applications.
+For effective performance testing of SPAs, tools like Selenium, Cypress, Playwright, and Lighthouse offer more comprehensive solutions. These tools are built to handle JavaScript-heavy applications and can provide deeper insights into both back-end API performance and front-end user experience, making them better suited to the needs of modern web applications.
 
 By adopting these alternatives, testers can ensure that they accurately measure the performance of SPAs, identify bottlenecks, and optimize both server-side and client-side performance for a smooth, responsive user experience.
